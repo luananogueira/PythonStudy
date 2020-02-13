@@ -1,0 +1,24 @@
+#calcula média 4 notas, lista + while
+
+while exit != 'x':
+    #Declração de Variaveis iniciais
+    count = int(0)
+    media = int(0)
+
+    while count < 4:
+        #criando lista com 4 posições
+        listN = [1,2,3,4]
+        print("Digite a nota", listN[count], ":")
+        listN[count] = float(input())
+        #somatória das 4 médias
+        media = media+listN[count]
+        count+=1
+
+    media = media/4
+    print("O valor da media entre as notas é =", media)
+
+    print("Pressione x para sair ou qualquer outra tecla para repetir o processo")
+    exit = input() #verifica se usuario quer executar novamente o programa ou sair
+
+
+#final do exercicio
