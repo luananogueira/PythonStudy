@@ -1,0 +1,23 @@
+#calcula desconto
+
+while exit != 'x':
+
+    total = float(0)
+
+    while exit != '0':
+
+        exit = (input("Digite o valor do produto ou 0 para continuar: "))
+        prod = float(exit)
+        total = total+prod
+
+    desc = float(input("Digite a porcentagem de desconto: "))
+
+    desct = (total*desc)/100
+    total = total-desct
+    print("valor total da compra = {}".format(total))
+
+    #verifica se usuario quer executar novamente o programa ou sair
+    exit = input("Pressione x para sair ou qualquer outra tecla para repetir o processo -> ")
+
+
+#final do exercicio
