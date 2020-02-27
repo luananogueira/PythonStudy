@@ -1,0 +1,26 @@
+#3.	Faça um programa que lê um conjunto de 3 valores op, base, altura, onde op é um valor inteiro e positivo,
+# base e altura, são quaisquer valores reais. A seguir:
+#a)	Se op=1 calcular e imprimir a área de um retângulo Area=base*altura.
+#b)	Se op=2 calcular e imprimir a área de triângulo Area=(base*altura)/2.
+
+
+while exit != 'x':
+    op=int(input("Digite 1 para calcular a área de um triangulo ou 2 para calcular a área de um triângulo: "))
+    if op==1:
+        base = float(input("Digite o valor da base: "))
+        altura = float(input("Digite o valor da altura: "))
+        area=base*altura
+        print(f"Área do retângulo = {area:.2f}")
+    elif op==2:
+        base = float(input("Digite o valor da base: "))
+        altura = float(input("Digite o valor da altura: "))
+        area=(base*altura)/2
+        print(f"Área do triângulo = {area:.2f}")
+    else:
+        print("Opção inválida")
+
+    #verifica se usuario quer executar novamente o programa ou sair
+    exit = input("Pressione x para sair ou qualquer outra tecla para repetir o processo -> ")
+
+
+#final do exercicio
