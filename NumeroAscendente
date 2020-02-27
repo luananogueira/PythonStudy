@@ -1,0 +1,19 @@
+#Lista 2 Exercicio 1
+
+#1.	Elabore um programa que leia um número (de 3 algarismos, faça a validação para aceitar apenas números menores que
+#1000) e imprima se ele é ascendente. Um número é ascendente se seus algarismos estão em ordem crescente. Por exemplo,
+# o número 258 é ascendente, pois, 2 < 5 e 5 < 8.
+
+num=int(input("Digite um número de 3 algarismos: "))
+if num<1000:
+    c=num//100
+    d=(num%100)//10
+    u=num%10
+    if c<d and d<u:
+        print(f"número {num} é ascendente")
+    else:
+        print(f"número {num} não é ascendente")
+else:
+    print("número digitado é inválido")
+
+#fim do exercicio
