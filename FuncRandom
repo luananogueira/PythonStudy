@@ -1,0 +1,23 @@
+# JOGO CAÇA NÍQUEIS
+#importa função rnadom para gerar numero aleatório
+import random
+
+aposta=float(input("Digite o valor da aposta R$ "))
+
+n1=random.randint(1,99)
+n2=random.randint(1,99)
+n3=random.randint(1,99)
+
+if n1==n2 and n1==n3:
+    premio=aposta*100
+    print(f"{n1} {n2} {n3}")
+    print(f"GRANDE PREMIO!!! Você GANHOU!!! R${premio:.2f}")
+elif n1==n2 or n1==n3 or n2==n3:
+    premio = aposta*5
+    print(f"{n1} {n2} {n3}")
+    print(f"Você ganhou!!! R${premio:.2f}")
+else:
+    print(f"{n1} {n2} {n3}")
+    print("Tente outra vez!!!")
+    
+#Fim do exercicio
