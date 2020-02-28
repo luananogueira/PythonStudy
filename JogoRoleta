@@ -1,0 +1,33 @@
+#Jogo Roleta Luana Nogueira da Silva
+
+import random
+
+while exit!='x':
+    aposta=float(input("Digite o valor da aposta R$ "))
+    na=int(input("Digite um numero entre 1 e 36: "))
+
+    if(na<1 and na>36):
+        print("Número Inválido")
+    else:
+        nr=random.randint(1,36)
+        d1=range(1,12)
+        d2=range(13,24)
+        d3=range(25,36)
+        print(f"Número Apostado !{na}!, Número Sorteado !{nr}!")
+        if nr==na:
+            premio=aposta*5
+            print(f"VOCÊ ACERTOU EM CHEIO!!! E GANHOU R${premio:.2f}")
+        elif (na in d1 and nr in d1) or (na in d2 and nr in d2) or (na in d3 and nr in d3):
+            premio=aposta*3
+            print(f"VOCÊ ACERTOU A DUZIA!! E GANHOU R${premio:.2f}")
+        elif (nr%2==0 and na%2==0) or (nr%2!=0 and na%2!=0):
+            premio=aposta*2
+            print(f"VOCÊ ACERTOU A PARIDADE! E GANHOU R${premio:.2f}")
+        else:
+            print(f"VOCÊ NÃO GANHOU NADA =(")
+
+    # verifica se usuario quer executar novamente o programa ou sair
+    exit = input("Pressione x para sair ou qualquer outra tecla para tentar novamente -> ")
+
+
+#fim do exercicio
