@@ -3,20 +3,20 @@
 
 placa=int(input("Digite a parte numerica da placa: "))
 
-if placa <10000:
-    d=placa%10
-    if d==1 or d==2:
-        print(f"Final da Placa {d} pode rodar às Segundas")
-    elif d==3 or d==4:
-        print(f"Final da Placa {d} pode rodar às Terças")
-    elif d==5 or d==6:
-        print(f"Final da Placa {d} pode rodar às Quartas")
-    elif d==7 or d==8:
-        print(f"Final da Placa {d} pode rodar às Quintas")
-    elif d==9 or d==0:
-        print(f"Final da Placa {d} pode rodar às Sextas")
-else:
+if placa >9999:
     print("Número digitado inválido")
+else:
+    d = placa % 10
+    if d == 1 or d == 2:
+        print(f"Final da Placa {d} pode rodar às Segundas")
+    elif d == 3 or d == 4:
+        print(f"Final da Placa {d} pode rodar às Terças")
+    elif d == 5 or d == 6:
+        print(f"Final da Placa {d} pode rodar às Quartas")
+    elif d == 7 or d == 8:
+        print(f"Final da Placa {d} pode rodar às Quintas")
+    else:
+        print(f"Final da Placa {d} pode rodar às Sextas")
     
     
 #fim do exercicio
