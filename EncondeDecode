@@ -1,0 +1,13 @@
+def encode(text, letter='p'): #função criptografia
+    add_letter = lambda c: letter + c
+    return ' '.join(''.join(map(add_letter, word)) for word in text.split())
+
+def decode(text): #função descriptografia
+    return ' '.join([word[1::2] for word in text.split()])
+
+text = input()#decodificado
+
+text = encode(text)
+print(text)
+text = decode(text)
+print(text)
