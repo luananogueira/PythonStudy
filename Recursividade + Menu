@@ -1,0 +1,78 @@
+from random import randint
+
+
+def criaVetor(valorMin, valorMax, tamanhoVetor):
+    vetor = []
+    i = 0
+    for i in range(tamanhoVetor):
+        vetor.append(randint(valorMin, valorMax))
+    return vetor
+
+
+def fibonacci(termo):
+    if termo <= 2:
+        return 1
+    else:
+        return fibonacci(termo - 1) + fibonacci(termo - 2)
+
+
+def potencia(base, expoente):
+    if expoente == 0:
+        return 1
+    if expoente == 1:
+        return base
+    return base * potencia(base, expoente - 1)
+
+
+def busca(lista, numeroLista):
+    if len(lista) == 0:
+        return False
+    if lista[0] == numeroLista:
+        return True
+    return busca(lista[1:], numeroLista)
+
+def mdc(x, y):
+    if y == 0:
+        return x
+    return mdc(y, x % y)
+
+print(mdc(70, 25)) # 5
+
+
+def menu():
+    print("1. Fibonacci")
+    print("2. Potencia")
+    print("3. Prcurar número na lista")
+    print("4. MDC")
+    print("5. Sair")
+    return int(input("Opçao-> "))
+
+
+while True:
+    op = menu()
+    if op == 1:
+        num = int(input("Digite o TERMO que desejo saber: "))
+        print(f"Fibonacci da posição {num} é {fibonacci(num)}\n")
+    elif op == 2:
+        num = int(input("Base -> "))
+        num2 = int(input("Expoente -> "))
+        print(f" {num}^{num2} = {potencia(num, num2)}\n")
+    elif op == 3:
+        minLista = int(input("Digite o valor MINIMO que pode aparecer na lista: "))
+        maxLista = int(input("Digite o valor MAXIMO que pode aparecer na lista: "))
+        tamanhoLista = int(input("Digite o TAMANHO da lista: "))
+        numeroProcura = int(input("Digite o VALOR que deseja PROCURAR: "))
+
+        lista = criaVetor(minLista, maxLista, tamanhoLista)
+        print(f"{lista}")
+
+        print(f"{busca(lista, numeroProcura)}")
+    elif op == 4:
+        x = int(input("Digite o valor do PRIMEIRO DIVISOR:"))
+        y = int(input("Digite o valor do SEGUNDO DIVISOR:"))
+
+        print(f"MDC de {x} e {y} = {mdc(x,y)}")
+    elif op == 5:
+        break
+    else:
+        print("Opção inválida!!")
